@@ -1,1 +1,25 @@
-<p>lista-auditorio works!</p>
+<h2>Lista Auditorios
+    <input type="text">
+</h2>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>nombre</th>
+            <th>entedecontrol</th>
+            <th>fechadeinicio</th>
+            <th>fechadefinalizacion</th>
+            <th>estado</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let auditoria of auditoria">
+            <td>{{ auditoria.nombre}}</td>
+            <td>{{auditoria.entedecontrol}}</td>
+            <td>{{auditoria.fechadeinicio}}</td>
+            <td>{{auditoria.fechadefinalizacion}}</td>
+            <td>{{auditoria.estado}}</td>
+        </tr>
+
+    </tbody>
+</table>
