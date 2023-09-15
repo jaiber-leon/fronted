@@ -5,9 +5,9 @@
     <thead class="table-dark">
         <tr>
             <th>nombre</th>
-            <th>entedecontrol</th>
-            <th>fechadeinicio</th>
-            <th>fechadefinalizacion</th>
+            <th>enteDeControl</th>
+            <th>fechaDeInicio</th>
+            <th>fechaDeFinalizacion</th>
             <th>estado</th>
         </tr>
 
@@ -15,10 +15,15 @@
     <tbody>
         <tr *ngFor="let auditoria of auditoria">
             <td>{{ auditoria.nombre}}</td>
-            <td>{{auditoria.entedecontrol}}</td>
-            <td>{{auditoria.fechadeinicio}}</td>
-            <td>{{auditoria.fechadefinalizacion}}</td>
-            <td>{{auditoria.estado}}</td>
+            <td>{{ auditoria.enteDeControl }}</td>
+            <td>{{ auditoria.fechaDeInicio }}</td>
+            <td>{{ auditoria.fechaDeFinalizacion }}</td>
+            <td>{{ auditoria.estado }}</td>
+
+            <td>
+                <button (click)= "actualizarAuditoria(auditoria.id)" class="btn btn-info">Editar</button>
+                <button (click)= "eliminarAuditoria(auditoria.id)" class="btn btn-danger" style="margin-left : 10px;">Eliminar</button>
+            </td>
         </tr>
 
     </tbody>

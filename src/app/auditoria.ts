@@ -1,9 +1,10 @@
-export class Auditoria {
+export class Auditoria{
 
-    id: number;
-    nombre: String;
-    entedecontrol: String;
-    fechadeinicio: String;
-    fechadefinalizacion: String;
-    estado: String;
+    id:number;
+    nombre:String;
+    enteDeControl:string;
+    fechaDeInicio:String;
+    fechaDeFinalizacion:String;
+    estado:String;
+
 }

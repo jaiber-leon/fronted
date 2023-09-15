@@ -1,0 +1,47 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="text-center">Registro de Auditoria</h3>
+    <form (ngSubmit)= "onSubmit()" #empleadoForm = "ngForm">
+    <div class="form-group">
+        <label>Nombre :</label>
+        <input type="text"
+        class="form-control"
+        id="nombre"
+        [(ngModel)]="auditoria.nombre"
+        name="nombre">
+    </div>
+    
+    <div class="form-group">
+        <label>Ente de control :</label>
+        <input type="text"
+        class="form-control"
+        id="entedecontrol"
+        [(ngModel)]="auditoria.enteDeControl"
+        name="entedecontrol">
+    </div>
+    <div class="form-group">
+        <label>Fecha de inicio :</label>
+        <input type="text"
+        class="form-control"
+        id="fechadeinicio"
+        [(ngModel)]="auditoria.fechaDeInicio"
+        name="fechadeinicio">
+    </div>
+    <div class="form-group">
+        <label>Fecha de finalizacion :</label>
+        <input type="text"
+        class="form-control"
+        id="fechadefinalizacion"
+        [(ngModel)]="auditoria.fechaDeFinalizacion"
+        name="fechadefinalizacion">
+    </div>
+    <div class="form-group">
+        <label>Estado :</label>
+        <input type="text"
+        class="form-control"
+        id="estado"
+        [(ngModel)]="auditoria.estado"
+        name="estado">
+    </div>
+    <button class="btn btn-success">Guardar</button>
+    </form>
+</div>
