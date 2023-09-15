@@ -25,15 +25,17 @@ export class ListaAuditorioComponent {
       this.auditoria = dato;
     });
   }
-   actualizarAuditoria(id:number){
-    this.router.navigate(['actualizar-auditorio',id]);
-
+   actualizarAuditoria(idAuditoria:number){
+    this.router.navigate(['actualizar-auditorio',idAuditoria]);
 
   }
-   eliminarAuditoria(id:number){
-    this.auditoriaServicio.eliminarAuditorio(id).subscribe(dato=>{
-      this.obtenerAuditorias;
+  eliminarAuditoria(id:number){
+    this.auditoriaServicio.eliminarAuditoria(id).subscribe(dato =>{
+      console.log(dato);
+      this.obtenerAuditorias();
     })
   }
+  
+  
 
 }

@@ -1,6 +1,6 @@
 export class Auditoria{
 
-    id:number;
+    idAuditorias:number;
     nombre:String;
     enteDeControl:string;
     fechaDeInicio:String;

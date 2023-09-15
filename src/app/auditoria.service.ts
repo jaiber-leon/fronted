@@ -14,7 +14,7 @@ export class AuditoriaService {
   private baseUrl2 ="http://localhost:8080/auditorias/crear"
   private baseUrl3 = "http://localhost:8080/auditorias/actualizar"
   private baseUrl4 = "http://localhost:8080/auditorias/borrar"
-  private baseUrl5 = "http://localhost:8080/auditorias/traerpornombre"
+  private baseUrl5 = "http://localhost:8080/auditorias/traerporid/"
 
   constructor(private httpClient : HttpClient) { }
 
@@ -24,16 +24,16 @@ export class AuditoriaService {
 
   guardarAuditoria(auditoria:Auditoria): Observable<Object>{
     return this.httpClient.post(`${this.baseUrl2}`,auditoria)
+ 
   }
-  actualizarEmpleado(id:number,auditoria:Auditoria):Observable<Object>{
-    return this.httpClient.put(`${this.baseUrl3}/${id}`,auditoria)
+  eliminarAuditoria(idAuditorias:number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl4}/${idAuditorias} ` )
   }
-  obtenerAuditoriaporid(nombre:string,auditoria:Auditoria):Observable<Object>{
-    return this.httpClient.get<Auditoria>(`${this.baseUrl3}/${nombre}`)
+  actualizarAuditoria(idAuditorias:number,auditoria:Auditoria): Observable<Object>{
+    return this.httpClient.delete(`${this.baseUrl3}/${idAuditorias} `)
   }
-  eliminarAuditorio(id:number):Observable<Object>{
-    return this.httpClient.delete(`${this.baseUrl4}/${id}`)
+  obtenerAuditoria(idAuditoria:number): Observable<Object>{
+    return this.httpClient.get(`${this.baseUrl5}/${idAuditoria} `)
   }
-  }
-
+}
 

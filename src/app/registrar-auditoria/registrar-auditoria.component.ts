@@ -17,18 +17,19 @@ export class RegistrarAuditoriaComponent {
   
   ngOnInit(): void{
   }
-  guardarauditorio(){
+  guardarAuditorio(){
     this.auditoriaServicio.guardarAuditoria(this.auditoria).subscribe(dato =>{
-      console.log(dato);
-    },error =>console.log(error))
-      
-  }  
-  irALAListaDeEmpleados(){
+     console.log(dato); 
+     this.irALAListaDeAuditorias();
+    },error => console.log(error))
+  }
+    
+  irALAListaDeAuditorias(){
     this.router.navigate(['/auditoria'])
   }
   
   onSubmit(){
-    this.guardarauditorio();
+    this.guardarAuditorio();
   }
   }
 

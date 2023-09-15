@@ -4,6 +4,7 @@
 <table class="table table-striped">
     <thead class="table-dark">
         <tr>
+            <th>idAuditorias</th>
             <th>nombre</th>
             <th>enteDeControl</th>
             <th>fechaDeInicio</th>
@@ -13,7 +14,9 @@
 
     </thead>
     <tbody>
+
         <tr *ngFor="let auditoria of auditoria">
+            <td>{{auditoria.idAuditorias}}</td>
             <td>{{ auditoria.nombre}}</td>
             <td>{{ auditoria.enteDeControl }}</td>
             <td>{{ auditoria.fechaDeInicio }}</td>
@@ -21,8 +24,8 @@
             <td>{{ auditoria.estado }}</td>
 
             <td>
-                <button (click)= "actualizarAuditoria(auditoria.id)" class="btn btn-info">Editar</button>
-                <button (click)= "eliminarAuditoria(auditoria.id)" class="btn btn-danger" style="margin-left : 10px;">Eliminar</button>
+                <button (click)="actualizarAuditoria(auditoria.idAuditorias)" class="btn btn-info">EDITAR</button>
+                <button (click)="eliminarAuditoria(auditoria.idAuditorias)" class="btn btn-info" style="margin-left: 10px">ELIMINAR</button>
             </td>
         </tr>
 
